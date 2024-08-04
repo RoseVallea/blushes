@@ -72,7 +72,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activites: [{ name: currentStatus, type: ActivityType.Watching}],
+    activities: [{ name: currentStatus, type: ActivityType.Watching}],
     status: 'dnd',
   });
 
