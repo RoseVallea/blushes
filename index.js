@@ -73,7 +73,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: over bubblegum ﹒ ♡, type: ActivityType.Watching}],
+    activities: [{ name: currentStatus, type: ActivityType.Watching}],
     status: 'dnd',
   });
 
@@ -82,7 +82,7 @@ function updateStatusAndSendMessages() {
 
   if (textChannel instanceof TextChannel) {
    
-    textChannel.send(`Bot status is: over bubblegum ﹒ ♡`);
+    textChannel.send(`Bot status is hi hi hi`);
   } else {
 
   }
