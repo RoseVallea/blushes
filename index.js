@@ -72,7 +72,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: over bubblegum ﹒ ♡, type: ActivityType.Watching}],
+    activity: [{ name: currentStatus, type: ActivityType.Watching}],
     status: 'dnd',
   });
 
