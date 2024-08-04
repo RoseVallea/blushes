@@ -82,7 +82,7 @@ function updateStatusAndSendMessages() {
 
   if (textChannel instanceof TextChannel) {
    
-    textChannel.send(`Bot status is: ${currentStatus}`);
+    textChannel.send(`Bot status is: over bubblegum ﹒ ♡`);
   } else {
 
   }
