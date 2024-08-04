@@ -36,6 +36,7 @@ app.listen(port, () => {
 });
 
 
+const statusMessages = ["over bubblegum ﹒ ♡"];
 
 
 let currentIndex = 0;
