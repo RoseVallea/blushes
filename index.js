@@ -36,6 +36,7 @@ app.listen(port, () => {
 });
 
 
+const statusMessages = ["over bubblegum﹒♡"];
 
 
 let currentIndex = 0;
@@ -72,7 +73,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: over bubblegum ﹒ ♡, type: ActivityType.Watching}],
+    activities: [{ name: currentStatus, type: ActivityType.Watching}],
     status: 'dnd',
   });
 
