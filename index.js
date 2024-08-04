@@ -72,7 +72,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    game: [{ name: currentStatus, type: "WATCHING"}],
+    activites: [{ name: currentStatus, type: "WATCHING"}],
     status: 'dnd',
   });
 
