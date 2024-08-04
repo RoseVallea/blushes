@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["over bubblegum﹒♡"];
+const statusMessages = ["over bubblegum ﹒ ♡","over bubblegum ﹒ ♡ ","over bubblegum ﹒ ♡"," over bubblegum ﹒ ♡","over bubblegum ﹒ ♡ ","over bubblegum ﹒ ♡","over bubblegum ﹒ ♡ ","over bubblegum ﹒ ♡ ","over bubblegum﹒ ♡"];
 
 
 let currentIndex = 0;
