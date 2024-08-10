@@ -36,6 +36,9 @@ app.listen(port, () => {
 });
 
 
+const statusMessages = ["mass ﹔ bypass only ﹒ ♡"];
+
+
 let currentIndex = 0;
 const channelId = '';
 
@@ -69,11 +72,18 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: '﹒ ♡', type: ActivityType.Watching}],
+    activities: [{ name: 'over bubblegum ﹒ ♡', type: ActivityType.Watching}],
     status: 'dnd',
   });
 
-  
+  const textChannel = client.channels.cache.get(channelId);
+
+  if (textChannel instanceof TextChannel) {
+   
+    textChannel.send(`Bot status is: ${currentStatus}`);
+  } else {
+
+  }
 
   currentIndex = (currentIndex + 1) % statusMessages.length;
 }
