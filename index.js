@@ -77,15 +77,6 @@ function updateStatusAndSendMessages() {
 
   const textChannel = client.channels.cache.get(channelId);
 
-  if (textChannel instanceof TextChannel) {
-   
-    textChannel.send(`Bot status is: ${currentStatus}`);
-  } else {
-
-  }
-
-  currentIndex = (currentIndex + 1) % statusMessages.length;
-}
 
 client.once('ready', () => {
   console.log(`\x1b[36m%s\x1b[0m`, `|    ✅ Bot is ready as ${client.user.tag}`);
