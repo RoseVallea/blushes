@@ -69,7 +69,6 @@ GIT : https://github.com/RTX-GAMINGG/Bot-ghost-status-remover-by-RTX
 
 function updateStatusAndSendMessages() {
   const currentStatus = statusMessages[currentIndex];
-  const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
     activities: [{ name: 'over bubblegum ﹒ ♡', type: ActivityType.Watching}],
