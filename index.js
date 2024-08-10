@@ -35,7 +35,7 @@ app.listen(port, () => {
   console.log(`🔗 Powered By RTX`);
 });
 
-const statusMessages = ["watching over bubblegum ﹒ ♡"];
+const statusMessages = ["spring on top ﹒ ♡"];
 
 
 let currentIndex = 0;
