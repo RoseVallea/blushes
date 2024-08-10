@@ -71,11 +71,21 @@ function updateStatusAndSendMessages() {
   const currentStatus = statusMessages[currentIndex];
 
   client.user.setPresence({
-    activities: [{ name: 'over bubblegum ﹒ ♡', type: ActivityType.Watching}],
+    activities: [{ name: 'over bubblegum ﹒ ♡', type: ActivityType.Custom}],
     status: 'dnd',
   });
 
   const textChannel = client.channels.cache.get(channelId);
+
+  if (textChannel instanceof TextChannel) {
+   
+    textChannel.send(`Bot status is: ${currentStatus}`);
+  } else {
+
+  }
+
+  currentIndex = (currentIndex + 1) % statusMessages.length;
+}
 
 
 client.once('ready', () => {
