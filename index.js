@@ -35,7 +35,7 @@ app.listen(port, () => {
   console.log(`🔗 Powered By RTX`);
 });
 
-
+const statusMessages = ["watching over bubblegum ﹒ ♡"];
 
 
 let currentIndex = 0;
@@ -70,7 +70,7 @@ function updateStatusAndSendMessages() {
   const currentStatus = statusMessages[currentIndex];
 
   client.user.setPresence({
-    activities: [{ name: 'mass ﹔ bypass only ﹒ ♡"', type: ActivityType.Custom}],
+    activities: [{ name: currentStatus, type: ActivityType.Custom}],
     status: 'dnd',
   });
 
