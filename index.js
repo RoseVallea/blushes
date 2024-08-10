@@ -36,8 +36,6 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["mass ﹔ bypass only ﹒ ♡"]
-
 let currentIndex = 0;
 const channelId = '';
 
@@ -67,23 +65,13 @@ GIT : https://github.com/RTX-GAMINGG/Bot-ghost-status-remover-by-RTX
  */
 
 
-function updateStatusAndSendMessages() {
-  const currentStatus = statusMessages[currentIndex];
 
   client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.Custom}],
+    activities: [{ name: '﹒ ♡', type: ActivityType.Watching}],
     status: 'dnd',
   });
 
   
-  const textChannel = client.channels.cache.get(channelId);
-
-  if (textChannel instanceof TextChannel) {
-   
-    textChannel.send(`Bot status is: ${currentStatus}`);
-  } else {
-
-  }
 
   currentIndex = (currentIndex + 1) % statusMessages.length;
 }
